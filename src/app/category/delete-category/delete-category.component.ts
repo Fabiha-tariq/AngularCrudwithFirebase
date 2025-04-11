@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { HeaderComponent } from "../../header/header.component";
 
 @Component({
   selector: 'app-delete-category',
-  imports: [],
+  imports: [HeaderComponent],
   templateUrl: './delete-category.component.html',
   styleUrl: './delete-category.component.css'
 })

@@ -1,1 +1,25 @@
-<p>read-category works!</p>
+<app-header></app-header>
+
+<div class="container mt-5">
+<h1 class="display-3 fw-bold mt-3 mb-3">Categories</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Category name</th>
+      <th>Category Status</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of item">
+      <td>{{item.categoryname}}</td>
+      <td>{{item.categorystatus}}</td>
+      <td>
+        <button class="btn btn-warning btn-sm">Edit</button>
+        <button class="btn btn-danger btn-sm ms-2">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
