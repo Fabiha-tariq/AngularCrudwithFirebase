@@ -1,0 +1,28 @@
+<app-header></app-header>
+
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Employee Name</th>
+        <th>Employee Email</th>
+        <th>Employee Salary</th>
+        <th> Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of item; let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{ item.name}}</td>
+        <td>{{ item.email}}</td>
+        <td>{{ item.salary}}</td>
+        <td>
+          <button class="btn btn-warning btn-sm">Edit</button>
+          <button class="btn btn-danger btn-sm ms-2">Delete</button>
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
