@@ -1,2 +1,19 @@
 <app-header></app-header>
-<p>update-category works!</p>
+<div class="container mt-5 p-5">
+  <h3 class="display-3 fw-bold mb-3">Add Category</h3>
+  <form (ngSubmit)="updateCategory()">
+    <div class="row">
+      <div class="col-md-6">
+        <label for="" class="form-label">Cateogry Name</label>
+        <input type="text" class="form-control" [(ngModel)]="categoryData.categoryname" name="categoryname"  id="">
+      </div>
+      <div class="col-md-6">
+        <label for="" class="form-label">Cateogry Status</label>
+        <input type="text" class="form-control" [(ngModel)]="categoryData.categorystatus" name="categorystatus"  id="">
+      </div>
+      <div class="col-md-12 mt-2">
+        <button type="submit" class="btn btn-primary">Update Category</button>
+      </div>
+    </div>
+  </form>
+</div>

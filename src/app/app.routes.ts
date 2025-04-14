@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
@@ -10,6 +10,7 @@ import { AddCategoryComponent } from './category/add-category/add-category.compo
 import { UpdateCategoryComponent } from './category/update-category/update-category.component';
 import { DeleteCategoryComponent } from './category/delete-category/delete-category.component';
 import { ReadCategoryComponent } from './category/read-category/read-category.component';
+import { NgModule } from '@angular/core';
 
 export const routes: Routes = [
 
@@ -22,7 +23,13 @@ export const routes: Routes = [
   {path:'employee', component:ReadEmployeeComponent},
 
   {path:'category/add-category', component:AddCategoryComponent},
-  {path:'category/update-category', component:UpdateCategoryComponent},
+  {path:'category/update-category/:id', component:UpdateCategoryComponent},
   {path:'category/delete-category', component:DeleteCategoryComponent},
   {path:'category', component:ReadCategoryComponent}
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
